@@ -1,0 +1,21 @@
+PODS:
+  - GPUImage2 (0.1.0)
+
+DEPENDENCIES:
+  - GPUImage2 (from `./GPUImage2.podspec`)
+
+EXTERNAL SOURCES:
+  GPUImage2:
+    :podspec: "./GPUImage2.podspec"
+
+CHECKOUT OPTIONS:
+  GPUImage2:
+    :commit: fe4dfc4c2a48b4a3484d2d7d33847ae0d547e7ec
+    :git: https://github.com/BradLarson/GPUImage2.git
+
+SPEC CHECKSUMS:
+  GPUImage2: 4ff31f41a47e240e5474b49d9e83e95e2ff5c562
+
+PODFILE CHECKSUM: 5e850245df98171ca6510d924cbc4bfc4b22f3c2
+
+COCOAPODS: 1.1.1
