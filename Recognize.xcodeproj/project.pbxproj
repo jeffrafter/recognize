@@ -17,11 +17,11 @@
 		5491953C1E375510004D76C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5491953A1E375510004D76C2 /* LaunchScreen.storyboard */; };
 		5491954C1E375693004D76C2 /* 010001.bin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5491954B1E375693004D76C2 /* 010001.bin.png */; };
 		549AEED51E3BBEDB001AB8FB /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 549AEED41E3BBEDB001AB8FB /* libz.tbd */; };
-		54F403F21E3ABEA40058D0DB /* libclstm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F403F11E3ABEA40058D0DB /* libclstm.a */; };
 		54F403F51E3ABEBC0058D0DB /* liblept.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F403F31E3ABEBC0058D0DB /* liblept.a */; };
 		54F403F61E3ABEBC0058D0DB /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F403F41E3ABEBC0058D0DB /* libpng.a */; };
 		54F403F91E3AC6480058D0DB /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F403F71E3AC6480058D0DB /* libjpeg.a */; };
 		54F403FA1E3AC6480058D0DB /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F403F81E3AC6480058D0DB /* libtiff.a */; };
+		CBD322031E3DD1500072B302 /* libclstm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBD322021E3DD1500072B302 /* libclstm.a */; };
 		E31948A14A68881CE9BDA2D7 /* Pods_Recognize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E109E10F77671B7325A770 /* Pods_Recognize.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,12 +40,12 @@
 		5491954B1E375693004D76C2 /* 010001.bin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 010001.bin.png; sourceTree = "<group>"; };
 		549195511E375B89004D76C2 /* Recognize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Recognize-Bridging-Header.h"; sourceTree = "<group>"; };
 		549AEED41E3BBEDB001AB8FB /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		54F403F11E3ABEA40058D0DB /* libclstm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclstm.a; sourceTree = "<group>"; };
 		54F403F31E3ABEBC0058D0DB /* liblept.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblept.a; sourceTree = "<group>"; };
 		54F403F41E3ABEBC0058D0DB /* libpng.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libpng.a; sourceTree = "<group>"; };
 		54F403F71E3AC6480058D0DB /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
 		54F403F81E3AC6480058D0DB /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
 		C2E109E10F77671B7325A770 /* Pods_Recognize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Recognize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBD322021E3DD1500072B302 /* libclstm.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libclstm.a; sourceTree = "<group>"; };
 		E9DD21EDEBA8D51D0BBC55C1 /* Pods-Recognize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Recognize.release.xcconfig"; path = "Pods/Target Support Files/Pods-Recognize/Pods-Recognize.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,8 +60,8 @@
 				540CE5491E37BCA100490726 /* libstdc++.tbd in Frameworks */,
 				54F403F91E3AC6480058D0DB /* libjpeg.a in Frameworks */,
 				540CE5451E37BBD300490726 /* libprotobuf.a in Frameworks */,
+				CBD322031E3DD1500072B302 /* libclstm.a in Frameworks */,
 				E31948A14A68881CE9BDA2D7 /* Pods_Recognize.framework in Frameworks */,
-				54F403F21E3ABEA40058D0DB /* libclstm.a in Frameworks */,
 				54F403F61E3ABEBC0058D0DB /* libpng.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +108,7 @@
 			children = (
 				549AEED41E3BBEDB001AB8FB /* libz.tbd */,
 				540CE5481E37BCA100490726 /* libstdc++.tbd */,
-				54F403F11E3ABEA40058D0DB /* libclstm.a */,
+				CBD322021E3DD1500072B302 /* libclstm.a */,
 				54F403F31E3ABEBC0058D0DB /* liblept.a */,
 				54F403F41E3ABEBC0058D0DB /* libpng.a */,
 				54F403F71E3AC6480058D0DB /* libjpeg.a */,
@@ -163,7 +163,7 @@
 				TargetAttributes = {
 					5491952D1E375510004D76C2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = B42KF28245;
+						DevelopmentTeam = K2Y849DEDX;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -381,14 +381,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = B42KF28245;
+				DEVELOPMENT_TEAM = K2Y849DEDX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Recognize/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,14 +408,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = B42KF28245;
+				DEVELOPMENT_TEAM = K2Y849DEDX;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Recognize/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

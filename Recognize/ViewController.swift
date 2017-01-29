@@ -13,13 +13,11 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    let thresh = AdaptiveThreshold()
     var pictureOutput = PictureOutput()
     
     var url: URL!
 
     var camera:Camera!
-    var capture = false
     
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var cropView: UIImageView!
@@ -44,11 +42,8 @@ class ViewController: UIViewController {
         }
 
         do {
-            thresh.blurRadiusInPixels = 4
             camera = try Camera(sessionPreset:AVCaptureSessionPreset640x480)
-            // camera.runBenchmark = true
-            camera.delegate = self
-            camera --> thresh --> renderView            
+            camera --> renderView
             camera.startCapture()
         } catch {
             fatalError("Could not initialize rendering pipeline: \(error)")
@@ -61,19 +56,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func takeItTapped(_ sender: Any) {
-        self.capture = true
         self.pictureOutput = PictureOutput()
         self.url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(UUID().uuidString)
         self.camera.saveNextFrameToURLAndCallback(url, pictureOutput: self.pictureOutput, format:.png, rect: self.screenView.frame) { image, answer in
             self.cropView.image = image
             self.outputLabel.text = answer
         }
-        
-        // pictureOutput.imageAvailableCallback = {[weak self] image in
-        //    print("Worked")
-        //    self!.cropView.image = image
-        // }
-        // thresh --> pictureOutput
     }
 }
 
@@ -147,24 +135,5 @@ public extension ImageSource {
         
         
         self --> pictureOutput
-    }
-}
-
-
-extension ViewController: CameraDelegate {
-    func didCaptureBuffer(_ sampleBuffer: CMSampleBuffer) {
-//        thresh.saveNextFrameToURL(url, format:.PNG)
-/*
-        if self.capture {
-            self.capture = false
-            print("got")
-            if let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) {
-                let attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, CMAttachmentMode(kCMAttachmentMode_ShouldPropagate))!
-                let img = CIImage(cvPixelBuffer: pixelBuffer, options: attachments as? [String: AnyObject])
-                cropView.image = UIImage(ciImage: img)
-                print("set")
-            }
-        }
-*/
     }
 }
